@@ -9,6 +9,7 @@ import { ShellComponent } from './shell/shell.component';
 import { Profile } from 'selenium-webdriver/firefox';
 import { CalendarComponent } from './calendar/calendar.component';
 import { NewaccountComponent } from './newaccount/newaccount.component';
+import { SalesComponent } from './sales/sales.component';
 
 const routes: Routes = [
   // { path: '', component: RegisterComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'appointments', component: AppointmentComponent },
     { path: 'calendar', component: CalendarComponent },
+    { path: 'sales', component: SalesComponent },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthMiddlewareGuard] },
   ]
 },

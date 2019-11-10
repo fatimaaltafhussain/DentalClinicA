@@ -18,6 +18,7 @@ import { ShellComponent } from './shell/shell.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { NewaccountComponent } from './newaccount/newaccount.component';
+import { SalesComponent } from './sales/sales.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NewaccountComponent } from './newaccount/newaccount.component';
     SidebarComponent,
     CalendarComponent,
     NewaccountComponent,
+    SalesComponent,
   ],
   imports: [
     BrowserModule,
