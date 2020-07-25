@@ -8,27 +8,27 @@
                             <strong>Register New Account</strong>
                         </div>
                         <div class="card-body card-block">
-                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <form [formGroup]="singupForm" (submit)="signup()" class="form-horizontal">
                                 <!-- //Username -->
                                 <div class="row form-group">
                                     <div class="col col-md-3">
                                         <label for="text-input" class=" form-control-label">Username</label>
                                     </div>
                                     <div class="col-4 col-md-4">
-                                        <input type="text" id="text-input" name="text-input" placeholder="Username" class="form-control">
+                                        <input type="text"placeholder="Username" class="form-control" id="username" formControlName="username">
                                     </div>
                                 </div>
-                                <!-- //Firs Name  -->
+                                <!-- //First Name  -->
                                 <div class="row form-group">
                                     <div class="col col-md-3">
                                         <label for="text-input" class=" form-control-label">First Name</label>
                                     </div>
                                     <div class="col-4 col-md-4.5">
-                                        <input type="text" id="text-input" name="text-input" placeholder="First Name" class="form-control">
+                                        <input type="text" id="fname" formControlName="fname" plxaceholder="Name" class="form-control">
                                     </div>
 
                                     <div class="col-5 col-md-4.5">
-                                        <input type="text" id="text-input" name="text-input" placeholder="Last Name" class="form-control">
+                                        <input type="text" id="lname" formControlName="lname" placeholder="Last Name" class="form-control">
                                     </div>
                                 </div>
                                 <!-- //Email -->
@@ -37,7 +37,7 @@
                                         <label for="email-input" class=" form-control-label">Email</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control">
+                                        <input type="email" id="email" formControlName="email" placeholder="Enter Email" class="form-control">
                                     </div>
                                 </div>
                                 <!-- //Enter Password -->
@@ -46,7 +46,7 @@
                                         <label for="password-input" class=" form-control-label">Password</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="password" id="password-input" name="password-input" placeholder="Password" class="form-control">
+                                        <input type="password" id="password" formControlName="password" placeholder="Password" class="form-control">
                                     </div>
                                 </div>
                                 <!-- //Confirm Password -->
@@ -55,7 +55,7 @@
                                         <label for="password-input" class=" form-control-label">Confirm Password</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="password" id="password-input" name="password-input" placeholder="Confirm Password" class="form-control">
+                                        <input type="password"  id="confirmpassword" formControlName="confirmpassword" placeholder="Confirm Password" class="form-control">
                                     </div>
                                 </div>
                                 <!-- //Gender -->
@@ -64,7 +64,7 @@
                                         <label for="select" class=" form-control-label">Gender</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <select name="select" id="select" class="form-control">
+                                        <select  id="gender" formControlName="gender"  class="form-control">
                           <option value="0">Please select</option>
                           <option value="1">Male</option>
                           <option value="2">Female</option>
@@ -78,7 +78,7 @@
                                         <label for="date" class=" form-control-label">Date of Birth</label>
                                     </div>
                                     <div class="col-12 col-md-3">
-                                        <input type="date" name="Date of Birth">
+                                        <input type="date"  id="dob" formControlName="dob" >
                                     </div>
                                 </div>
 
@@ -88,7 +88,7 @@
                                         <label for="date" class=" form-control-label">Phone Number</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <input type="text" id="phoneNo" name="phoneNo" placeholder="Phone Number" class="form-control" required onkeyup="keyPress(); return false;" minlength=11 maxlength=11>
+                                        <input type="text" id="phoneno" formControlName="phoneno"  placeholder="Phone Number" class="form-control" required onkeyup="keyPress(); return false;" minlength=11 maxlength=11>
 
                                     </div>
                                 </div>
@@ -96,11 +96,11 @@
                         </div>
 
                         <div class="card-footer">
-                            <button type="submit" class="btn  btn-primary btn-lg" [routerLink]="['']">
-              <!-- <i class="fa fa-dot-circle-o"></i> Submit -->
-              Submit
+                            <button type="submit" class="btn  btn-primary btn-lg" routerLink='/register' >
+                                    <!-- <input class="btn btn-primary btn-lg" type="submit" value="Register" > -->
+Submit
           </button>
-                            <button type="cancel" class="btn btn-danger btn-lg" [routerLink]="['/register']">
+                            <button type="cancel" class="btn btn-danger btn-lg" routerLink='/register'>
                            Cancel
           </button>
                         </div>

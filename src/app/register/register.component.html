@@ -5,25 +5,27 @@
                 <div class="login-content">
                     <div class="login-logo">
                         <a href="#">
-                            <img src="assets/images/icon/implantum.jpg" width=200 height=100 alt="implantum">
+                            <img src="assets/images/icon/betterhalf.jpg" width=200 height=100 alt="BetterHalf">
                         </a>
                     </div>
+               
+                    <form [formGroup]="signinForm" (submit)="signin()">
                     <div class="login-form">
                         <div class="form-group">
                             <label>Email Address</label>
-                            <input type="email" class="form-control" [(ngModel)]="model.email" id="email" #email="ngModel" [ngClass]="{'is-invalid': f.submitted && email.invalid}" placeholder="Enter email" name="email" required>
+                            <input type="email" id="email" formControlName="email" placeholder="Enter email" class="form-control" required>
                             <div class="invalid-feedback">
                                 <div>email is invalid</div>
                             </div>
 
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{'is-invalid': f.submitted && password.invalid}" id="pwd" placeholder="Enter password" name="pwd" required minlength="6">
-                                <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                                <input type="password" id="password" formControlName="password" placeholder="Enter Password" class="form-control"required >
+                                <!-- <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
                                     <div *ngIf="email.errors.minlength">minimum 6 characters</div>
                                     <div *ngIf="email.errors.required">password is required</div>
                                     placeholder="Password">
-                                </div>
+                                </div> -->
 
                             </div>
 
@@ -32,11 +34,12 @@
                               <input type="checkbox" name="remember">Remember Me
                           </label>
                                 <label>
-                              <a href="#">Forgotten Password?</a>
+                              <a href="forgotpassword">Forgotten Password?</a>
                           </label>
                             </div>
-                            <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
-                            <!-- <div class="social-login-content">
+                            <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit" routerLink="/home" (click)='signin()'>Sign In</button>
+
+                            <!-- <div class="social-login-content">ng serve
                               <div class="social-button">
                                 <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
                                       <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button> 
@@ -50,41 +53,14 @@
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
 
     </div>
+</div>
 
 
 
 
-
-    <!-- 
-
-<div class="container">
-  <h2>login</h2>
-  <form name="form" #f="ngForm" (ngSubmit)="f.valid && onSubmit()" novalidate>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input  type="email" class="form-control" [(ngModel)]="model.email" id="email"  #email="ngModel" [ngClass]="{'is-invalid': f.submitted && email.invalid}"  placeholder="Enter email" name="email" required>
-      <div class="invalid-feedback">
-        <div>email is invalid</div>
-      </div>
-    </div>
-  
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input  type="password" class="form-control" [(ngModel)] = "model.password" #password="ngModel" [ngClass]="{'is-invalid': f.submitted && password.invalid}" id="pwd" placeholder="Enter password" name="pwd" required minlength="6" >
-      <div *ngIf="f.submitted && password.invalid"  class="invalid-feedback">
-        <div *ngIf="email.errors.minlength">minimum 6 characters</div>
-        <div *ngIf="email.errors.required">password is required</div>
-      </div>
-        </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="remember"> Remember me</label>
-    </div>
-    <button  class="btn btn-default">Submit</button>
-   
-  </form>
-</div> -->-->

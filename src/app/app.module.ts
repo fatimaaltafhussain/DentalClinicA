@@ -12,13 +12,14 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthMiddlewareGuard } from './auth-middleware.guard';
 import { ProfileComponent } from './profile/profile.component';
-import { AppointmentComponent } from './appointments/appointment.component';
 import { HeaderComponent } from './common/header/header.component';
 import { ShellComponent } from './shell/shell.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { NewaccountComponent } from './newaccount/newaccount.component';
-import { SalesComponent } from './sales/sales.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,14 @@ import { SalesComponent } from './sales/sales.component';
     HomeComponent,
     RegisterComponent,
     ProfileComponent,
-    AppointmentComponent,
     HeaderComponent,
     ShellComponent,
     SidebarComponent,
     CalendarComponent,
     NewaccountComponent,
-    SalesComponent,
+    ForgotpasswordComponent,
+    AboutusComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,
